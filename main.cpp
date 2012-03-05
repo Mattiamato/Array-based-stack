@@ -46,7 +46,10 @@ int main (int argc, const char * argv[])
         e.underflowoutput();  
     }
     
-    
+	delete &mystack;
+
+    int i;
+	std::cin >> i;
 
     return 0;
 }
