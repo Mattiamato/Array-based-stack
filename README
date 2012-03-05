@@ -1,0 +1,14 @@
+Task B): Array Based Stack
+
+We have a football card game and the deck of the game is implemented as a stack. We
+are not interested in the mechanics of the game but only in the functionality of the deck.
+A stack provides those functions; constructor(), destructor(), pop(), push(), top(), empty(),
+size().
+
+1) Implementation
+
+The header file is already provided and the main.cpp is filled with code to test the
+card deck with FC Barcelona. Your exercise is to implement all the functions in the
+stack_ab.cpp .
+Hint: Be aware of stack over/underflow, try to get the knowledge of exceptions (for
+later usage).
