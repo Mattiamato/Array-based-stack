@@ -8,11 +8,11 @@
 
 #ifndef stack_arraybased_stack_ab_h
 #define stack_arraybased_stack_ab_h
+
 const int StackMax=10;
+
 #include <string>
 #include "exceptions.h"
-
-
 
 class Stack_ab
 {
@@ -22,7 +22,7 @@ public:
     Stack_ab();
     ~Stack_ab();
     int size();
-    void push(std:: string);
+    void push(std::string value);
     std::string pop();
     std::string top();
     bool empty();

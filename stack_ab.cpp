@@ -18,7 +18,9 @@ Stack_ab::Stack_ab()					//constructor
 
 Stack_ab::~Stack_ab()					//destructor
 {
-	delete [] data;
+	for(int i=0; i < StackMax; i++)
+		data[i].clear();
+	index = -1;
 }
 
 int Stack_ab::size()					//return stack size
@@ -30,9 +32,16 @@ void Stack_ab::push(std::string value)	//add to stack
 {
 	try
 	{
-		index++;
-		data[index] = value;
-
+		if(index+1 < StackMax)
+		{
+			index++;
+			data[index] = value;
+		}
+		else
+		{
+			OverFlow e;
+			throw e;
+		}
 	}
 	catch(OverFlow e)
 	{
@@ -58,11 +67,18 @@ std::string Stack_ab::top()				//return top position
 {
 	try	
 	{
-		return data[index];
+		if(index != -1)
+			return data[index];
+		else
+		{
+			UnderFlow e;
+			throw e;
+		}
 	}
 	catch(UnderFlow e)
 	{
 		e.underflowoutput();
+		return "Nothing";
 	}
 }
 
